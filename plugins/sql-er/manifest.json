@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/t8y2/dbx/main/plugins/manifest.schema.json",
+  "manifest_version": 1,
+  "id": "com.liuli.sql-er",
+  "name": "SQL 数据脉络",
+  "version": "0.2.13",
+  "publisher": "liuli",
+  "description": "SQL 逻辑阅读、字段溯源与物理表关系分析。展开 CTE 和子查询，按数据库及板块保存关系库，支持选择同步、手工维护和字典关联查询及导出。沿用原插件数据存储，升级保留数据字典。",
+  "icon": "assets/plugin.svg",
+  "permissions": [
+    "host.storage",
+    "host.workbench",
+    "host.connections:read",
+    "host.data:read"
+  ],
+  "engines": {
+    "dbx": ">=0.5.68",
+    "host_api": "1"
+  },
+  "entrypoints": {
+    "ui": {
+      "root": "ui",
+      "entry": "ui/index.html"
+    }
+  },
+  "contributions": [
+    {
+      "type": "workbench",
+      "id": "com.liuli.sql-er.main",
+      "label": "SQL 数据脉络",
+      "description": "SQL 逻辑 · 字段溯源 · 数据关系库",
+      "icon": "assets/plugin.svg"
+    },
+    {
+      "type": "result-view",
+      "id": "com.liuli.sql-er.result",
+      "label": "SQL 数据脉络",
+      "description": "将当前查询 SQL 带入数据脉络，确认后开始解析"
+    }
+  ],
+  "localizations": {
+    "zh-CN": {
+      "name": "SQL 数据脉络",
+      "description": "SQL 逻辑阅读、字段溯源、物理表关系与持久关系库。字典展示和导出关联说明，界面跟随 DBX 主题。",
+      "contributions": {
+        "com.liuli.sql-er.main": {
+          "label": "SQL 数据脉络",
+          "description": "SQL 逻辑 · 字段溯源 · 数据关系库"
+        },
+        "com.liuli.sql-er.result": {
+          "label": "SQL 数据脉络",
+          "description": "将当前查询 SQL 带入数据脉络，确认后开始解析"
+        }
+      }
+    }
+  }
+}

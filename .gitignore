@@ -1,0 +1,23 @@
+# Local build outputs and historical packages
+/build/
+/tools/__pycache__/
+/tools/*.png
+/tools/*.log
+/tools/*
+!/tools/sql-slice.js
+!/tools/sql-logic.js
+!/tools/verify-sql-slice.cjs
+!/tools/fixtures/
+/tools/fixtures/*
+!/tools/fixtures/complex-82-column-query.sql
+
+# Exclude unrelated helper plugin and historical release notes
+/plugins/sql-helper/
+/plugins/sql-er/dist/
+/SQL-*.md
+!/SQL-slice-0.2.13-release-notes.md
+
+# Keep only the current installation package
+/dist/*
+!/dist/com.liuli.sql-er-0.2.13-universal.dbxp
+!/dist/com.liuli.sql-er-0.2.13-universal.artifact.json
